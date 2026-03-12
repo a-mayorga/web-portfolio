@@ -32,10 +32,6 @@ const Navbar = () => {
 							active={activeSection === id}
 							key={id}
 							href={`#${id}`}
-							style={{
-								color: activeSection === id ? '#FFFFFF' : '#a9a9a9',
-								cursor: 'pointer'
-							}}
 							onClick={() => scrollTo(id)}>
 							{label}
 						</TabNav.Link>

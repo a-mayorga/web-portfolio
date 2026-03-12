@@ -2,7 +2,18 @@
 	width: 100%;
 }
 
+a:not([data-active]) > span {
+	color: #a9a9a9;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+a:not([data-active]):hover > span {
+	color: #ffffff;
+}
+
 a[data-active] > span {
+	color: #ffffff;
 	font-weight: bold;
 }
 
