@@ -1,42 +1,73 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+	width: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+a[data-active] > span {
+	font-weight: bold;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lightning-btn {
+	position: relative;
+	padding: 16px 24px;
+	border-radius: 12px;
+	background: #1b1b1b;
+	color: white;
+	font-weight: 500;
+	font-size: 18px;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	border: 1px solid white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.lightning-btn:hover {
+	background: #2b2b2b;
 }
 
-.card {
-  padding: 2em;
+.lightning-btn:hover > .border-mask {
+	opacity: 1;
 }
 
-.read-the-docs {
-  color: #888;
+.lightning-btn:hover > .border-mask > .border-glow {
+	animation: rotateShine 2s linear infinite;
+}
+
+.border-mask {
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	border-radius: 12px;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	opacity: 0;
+	padding: 4px;
+	mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0) border-box;
+	mask-composite: exclude;
+}
+
+.border-glow {
+	background: conic-gradient(
+		from 0deg,
+		transparent 0%,
+		#3b82f6 10%,
+		#22d3ee 15%,
+		transparent 20%
+	);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 500px;
+	height: 500px;
+	transform: translate(-50%, -50%);
+	transform-origin: center;
+}
+
+@keyframes rotateShine {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
 }

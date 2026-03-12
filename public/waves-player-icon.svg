@@ -1,0 +1,30 @@
+<svg
+  width="48"
+  height="48"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="wavesGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Circle -->
+  <circle
+    cx="24"
+    cy="24"
+    r="20"
+    stroke="url(#wavesGradient)"
+    stroke-width="3"
+    fill="none"
+  />
+
+  <!-- Wave bars -->
+  <rect x="15" y="18" width="4" height="12" rx="2" fill="url(#wavesGradient)" />
+  <rect x="22" y="14" width="4" height="20" rx="2" fill="url(#wavesGradient)" />
+  <rect x="29" y="18" width="4" height="12" rx="2" fill="url(#wavesGradient)" />
+</svg>
