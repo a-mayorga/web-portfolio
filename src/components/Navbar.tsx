@@ -1,44 +1,54 @@
-import { TabNav } from '@radix-ui/themes/dist/cjs/components/index.js';
-import { useScrolled } from '../hooks/useScrolled';
-import { useActiveSection } from '../hooks/useActiveSection';
-import useScrollTo from '../hooks/useScrollTo';
+import { useState } from 'react';
 
-const links = [
-	{ id: 'home', label: 'Home' },
-	{ id: 'about', label: 'About' },
-	{ id: 'projects', label: 'Projects' },
-	{ id: 'contact', label: 'Contact' }
-];
+import { Menu } from 'lucide-react';
+import { TabNav } from '@radix-ui/themes/dist/cjs/components/index.js';
+
+import MenuModal from './MenuModal';
+import useScrollTo from '../hooks/useScrollTo';
+import { sections } from '../data/sections';
+import { useActiveSection } from '../hooks/useActiveSection';
+import { useScrolled } from '../hooks/useScrolled';
 
 const Navbar = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const scrollTo = useScrollTo();
 	const scrolled = useScrolled();
-	const activeSection = useActiveSection([
-		'home',
-		'about',
-		'projects',
-		'contact'
-	]);
+	const activeSection = useActiveSection(['home', 'about-me', 'projects']);
 
 	return (
-		<nav
-			className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-				scrolled ? 'backdrop-blur bg-black/50' : ''
-			}`}>
-			<div className="flex justify-end w-full py-2 px-4">
-				<TabNav.Root size="2">
-					{links.map(({ id, label }) => (
+		<>
+			<nav
+				className={`fixed top-0 w-full z-50 transition-all duration-300 flex justify-end py-2 px-4 ${
+					scrolled ? 'backdrop-blur bg-black/50' : ''
+				}`}
+			>
+				<TabNav.Root
+					size="2"
+					className="sm:flex hidden w-full"
+				>
+					{sections.map(({ id, label }) => (
 						<TabNav.Link
 							active={activeSection === id}
 							key={id}
 							href={`#${id}`}
-							onClick={() => scrollTo(id)}>
+							onClick={() => scrollTo(id)}
+						>
 							{label}
 						</TabNav.Link>
 					))}
 				</TabNav.Root>
-			</div>
-		</nav>
+				<button
+					className="sm:hidden z-50 p-2 mt-2 mr-2 rounded-lg border border-white/20 hover:bg-[#1b1b1b]"
+					onClick={() => setIsMenuOpen(true)}
+				>
+					<Menu />
+				</button>
+			</nav>
+			<MenuModal
+				isOpen={isMenuOpen}
+				onClose={() => setIsMenuOpen(false)}
+			/>
+		</>
 	);
 };
 

@@ -1,4 +1,6 @@
-export const projects = [
+import type { Project } from '../types/Project';
+
+export const projects: Project[] = [
 	{
 		id: 1,
 		title: 'Waves Player',
@@ -8,11 +10,11 @@ export const projects = [
 			'Discovering new music can be overwhelming. The goal was to create a simple interface to explore bands based on user preferences.',
 		solution:
 			'Built a responsive UI that recommends bands using the Spotify API and provides preview playback for quick discovery.',
-		stack: ['React', 'TypeScript', 'Vite', 'Deezer'],
+		stack: ['react', 'typescript', 'vite', 'deezer'],
 		image: '/projects/waves-player/thumbnail.png',
 		github: 'https://github.com/a-mayorga/WavesPlayer',
-		demo: 'waves-player-v1.vercel.app',
-		color: '#6366F1'
+		demo: 'https://waves-player-v1.vercel.app',
+		color: '#6366F1',
 	},
 	{
 		id: 2,
@@ -23,10 +25,10 @@ export const projects = [
 			'Managing job applications can be time-consuming and disorganized.',
 		solution:
 			'Created a comprehensive application tracking system with status updates, notes, and analytics.',
-		stack: ['Next.js', 'TanStack Query', 'PostgreSQL'],
+		stack: ['nextjs', 'reactquery', 'postgresql'],
 		image: '/projects/job-application-tracker/thumbnail.png',
 		github: 'https://github.com/a-mayorga/JobApplicationTracker',
-		demo: 'job-application-tracker-demo-amayorga.vercel.app/',
-		color: '#A78BFA'
-	}
+		demo: 'https://job-application-tracker-demo-amayorga.vercel.app',
+		color: '#A78BFA',
+	},
 ];

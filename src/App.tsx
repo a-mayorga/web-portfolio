@@ -1,11 +1,8 @@
-import '@radix-ui/themes/styles.css';
-
 import './App.css';
 
 import Projects from './components/Projects';
 import Navbar from './components/Navbar';
-import About from './components/About';
-import Contact from './components/Contact';
+import AboutMe from './components/AboutMe';
 import Home from './components/Home';
 import { useMousePosition } from './hooks/useMousePosition';
 
@@ -18,14 +15,14 @@ function App() {
 				className="absolute w-[900px] h-[900px] rounded-full blur-[120px] opacity-20 pointer-events-none z-0 transition-transform duration-500 ease-out"
 				style={{
 					transform: `translate(${x - 450}px, ${y - 450}px)`,
-					background: 'radial-gradient(circle, #6366F1, transparent 60%)'
+					background:
+						'radial-gradient(circle, #6366F1, transparent 60%)',
 				}}
 			/>
 			<Navbar />
 			<Home />
-			<About />
+			<AboutMe />
 			<Projects />
-			<Contact />
 		</div>
 	);
 }

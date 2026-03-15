@@ -7,7 +7,7 @@ export function useMousePosition() {
 		const updateMouse = (e: MouseEvent) => {
 			setPosition({
 				x: e.clientX,
-				y: e.clientY
+				y: e.clientY,
 			});
 		};
 

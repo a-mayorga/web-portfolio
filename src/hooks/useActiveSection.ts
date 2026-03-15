@@ -13,7 +13,7 @@ export function useActiveSection(sectionIds: string[]) {
 				});
 			},
 			{
-				rootMargin: '-40% 0px -50% 0px'
+				rootMargin: '-40% 0px -50% 0px',
 			}
 		);
 
