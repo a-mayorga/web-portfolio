@@ -28,7 +28,7 @@ const SkillCard = ({ stack, className = '' }: SkillCardProps) => {
 									/>
 								) : (
 									<img
-										src="/icons/azuredevops.svg"
+										src="./icons/azuredevops.svg"
 										className="w-8 h-8"
 									/>
 								)}

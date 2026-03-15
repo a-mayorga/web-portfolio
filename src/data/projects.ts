@@ -11,7 +11,7 @@ export const projects: Project[] = [
 		solution:
 			'Built a responsive UI that recommends bands using the Spotify API and provides preview playback for quick discovery.',
 		stack: ['react', 'typescript', 'vite', 'deezer'],
-		image: '/projects/waves-player/thumbnail.png',
+		image: './projects/waves-player/thumbnail.png',
 		github: 'https://github.com/a-mayorga/WavesPlayer',
 		demo: 'https://waves-player-v1.vercel.app',
 		color: '#6366F1',
@@ -26,7 +26,7 @@ export const projects: Project[] = [
 		solution:
 			'Created a comprehensive application tracking system with status updates, notes, and analytics.',
 		stack: ['nextjs', 'reactquery', 'postgresql'],
-		image: '/projects/job-application-tracker/thumbnail.png',
+		image: './projects/job-application-tracker/thumbnail.png',
 		github: 'https://github.com/a-mayorga/JobApplicationTracker',
 		demo: 'https://job-application-tracker-demo-amayorga.vercel.app',
 		color: '#A78BFA',

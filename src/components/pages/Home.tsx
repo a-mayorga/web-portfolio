@@ -32,7 +32,7 @@ export default function Home() {
 						</p>
 						<div className="flex flex-col items-center gap-8 sm:flex-row">
 							<a
-								href="/resume/alberto-torres-resume.pdf"
+								href="./resume/alberto-torres-resume.pdf"
 								download="Alberto-Torres-Resume.pdf"
 								className="lightning-btn place-self-center sm:place-self-start"
 							>
@@ -58,7 +58,7 @@ export default function Home() {
 						</div>
 					</div>
 					<img
-						src="/profile.jpg"
+						src="./profile.jpg"
 						alt="Profile picture"
 						className="w-50 md:w-102 lg:w-124 max-w-[300px] aspect-square object-cover rounded-full"
 					/>
