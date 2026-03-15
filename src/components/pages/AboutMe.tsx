@@ -25,7 +25,7 @@ export default function AboutMe() {
 						reliable interfaces that people genuinely enjoy using.
 					</p>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-y-8">
 						<SkillCard
 							stack={techStacks[0]}
 							className="md:row-span-2"

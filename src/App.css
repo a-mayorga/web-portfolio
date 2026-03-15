@@ -46,27 +46,20 @@ a[data-active] > span {
 	background: #2b2b2b;
 }
 
-.lightning-btn:hover > .border-mask {
-	opacity: 1;
-}
-
-.lightning-btn:hover > .border-mask > .border-glow {
-	animation: rotateShine 2s linear infinite;
-}
-
 .border-mask {
-	position: absolute;
-	top: -2px;
-	left: -2px;
 	border-radius: 12px;
-	width: calc(100% + 4px);
 	height: calc(100% + 4px);
-	opacity: 0;
-	padding: 4px;
+	left: -2px;
 	mask:
 		linear-gradient(#000 0 0) content-box,
 		linear-gradient(#000 0 0) border-box;
 	mask-composite: exclude;
+	opacity: 0;
+	padding: 4px;
+	pointer-events: none;
+	position: absolute;
+	top: -2px;
+	width: calc(100% + 4px);
 }
 
 .border-glow {
@@ -77,13 +70,14 @@ a[data-active] > span {
 		#22d3ee 15%,
 		transparent 20%
 	);
+	height: 500px;
+	left: 50%;
 	position: absolute;
 	top: 50%;
-	left: 50%;
-	width: 500px;
-	height: 500px;
-	transform: translate(-50%, -50%);
 	transform-origin: center;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	will-change: transform;
 }
 
 @keyframes rotateShine {
@@ -92,6 +86,20 @@ a[data-active] > span {
 	}
 	100% {
 		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+@keyframes rotateShineOnce {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+		opacity: 1;
+	}
+	95% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+		opacity: 0;
 	}
 }
 
@@ -104,5 +112,25 @@ a[data-active] > span {
 	}
 	100% {
 		background-position: 0% 50%;
+	}
+}
+
+@media (hover: none) {
+	.lightning-btn > .border-mask {
+		opacity: 1;
+	}
+
+	.lightning-btn .border-glow {
+		animation: rotateShineOnce 2s linear 0.5s forwards;
+	}
+}
+
+@media (width >= 40rem) {
+	.lightning-btn:hover > .border-mask {
+		opacity: 1;
+	}
+
+	.lightning-btn:hover .border-glow {
+		animation: rotateShine 2s linear infinite;
 	}
 }

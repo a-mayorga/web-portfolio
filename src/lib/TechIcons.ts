@@ -8,6 +8,8 @@ import {
 	SiDeezerHex,
 	SiGit,
 	SiGitHex,
+	SiGithubactions,
+	SiGithubactionsHex,
 	SiHtml5,
 	SiHtml5Hex,
 	SiJavascript,
@@ -24,6 +26,8 @@ import {
 	SiReactHex,
 	SiReactquery,
 	SiReactqueryHex,
+	SiRedux,
+	SiReduxHex,
 	SiTailwindcss,
 	SiTailwindcssHex,
 	SiTypescript,
@@ -119,4 +123,14 @@ export const TechIcons: Record<any, Skill> = {
 		color: SiNxHex,
 		label: 'Nx',
 	},
+	githubactions: {
+		icon: SiGithubactions,
+		color: SiGithubactionsHex,
+		label: 'GitHub Actions',
+	},
+	redux: {
+		icon: SiRedux,
+		color: SiReduxHex,
+		label: 'Redux',
+	}
 } as const;

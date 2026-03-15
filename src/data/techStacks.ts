@@ -12,6 +12,7 @@ export const techStacks: TechStack[] = [
 			'html',
 			'css',
 			'tailwind',
+			'redux'
 		],
 	},
 	{
@@ -22,6 +23,6 @@ export const techStacks: TechStack[] = [
 	{
 		id: 'tools',
 		label: 'Tools',
-		skills: ['azuredevops', 'git', 'nx'],
+		skills: ['azuredevops', 'git', 'nx', 'githubactions'],
 	},
 ];
