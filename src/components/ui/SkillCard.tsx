@@ -1,11 +1,16 @@
+import { useMemo } from 'react';
+
 import { TechIcons } from '../../lib/TechIcons';
 import type { TechIconId } from '../../types/TechIconId';
 import type { SkillCardProps } from '../../types/SkillCardsProps';
 
 const SkillCard = ({ stack, className = '' }: SkillCardProps) => {
+	const delay = useMemo(() => `${Math.random() * 6}s`, []);
+
 	return (
 		<div
 			className={`p-[1px] md:max-w-xl rounded-xl bg-gradient-to-r from-[#6366F1] via-[#A78BFA] via-[#3b82f6] to-[#22d3ee] bg-[length:200%_200%] animate-[gradient_6s_linear_infinite] ${className}`}
+			style={{ animationDelay: delay }}
 		>
 			<div
 				className={`w-full h-full bg-[#1f1f1f] rounded-xl px-6 py-4 text-center`}
