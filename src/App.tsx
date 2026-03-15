@@ -1,9 +1,9 @@
 import './App.css';
 
-import Projects from './components/Projects';
-import Navbar from './components/Navbar';
-import AboutMe from './components/AboutMe';
-import Home from './components/Home';
+import Projects from './components/pages/Projects';
+import Navbar from './components/ui/Navbar';
+import AboutMe from './components/pages/AboutMe';
+import Home from './components/pages/Home';
 import { useMousePosition } from './hooks/useMousePosition';
 
 function App() {

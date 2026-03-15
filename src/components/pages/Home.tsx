@@ -1,4 +1,4 @@
-import FadeInSection from './FadeInSection';
+import FadeInSection from '../ui/FadeInSection';
 import { SiGithub } from '@icons-pack/react-simple-icons';
 import { FileDown, Linkedin } from 'lucide-react';
 

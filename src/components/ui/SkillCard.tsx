@@ -1,6 +1,6 @@
-import { TechIcons } from '../lib/TechIcons';
-import type { TechIconId } from '../types/TechIconId';
-import type { SkillCardProps } from '../types/SkillCardsProps';
+import { TechIcons } from '../../lib/TechIcons';
+import type { TechIconId } from '../../types/TechIconId';
+import type { SkillCardProps } from '../../types/SkillCardsProps';
 
 const SkillCard = ({ stack, className = '' }: SkillCardProps) => {
 	return (

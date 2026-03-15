@@ -1,6 +1,6 @@
-import FadeInSection from './FadeInSection';
-import SkillCard from './SkillCard';
-import { techStacks } from '../data/techStacks';
+import FadeInSection from "../ui/FadeInSection";
+import SkillCard from "../ui/SkillCard";
+import { techStacks } from "../../data/techStacks";
 
 export default function AboutMe() {
 	return (

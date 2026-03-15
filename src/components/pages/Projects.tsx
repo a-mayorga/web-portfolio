@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
-import FadeInSection from './FadeInSection';
-import ProjectCard from './ProjectCard';
-import ProjectModal from './ProjectModal';
-import { projects } from '../data/projects';
-import type { Project } from '../types/Project';
+import FadeInSection from '../ui/FadeInSection';
+import ProjectCard from '../ui/ProjectCard';
+import ProjectModal from '../ui/ProjectModal';
+import type { Project } from '../../types/Project';
+import { projects } from '../../data/projects';
 
 export default function Projects() {
 	const [selectedProject, setSelectedProject] = useState<Project | null>(

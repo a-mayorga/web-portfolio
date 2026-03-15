@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 
-import type { ProjectModalProps } from '../types/ProjectModalProps';
+import type { ProjectModalProps } from '../../types/ProjectModalProps';
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 	return (

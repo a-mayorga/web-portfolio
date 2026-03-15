@@ -4,8 +4,8 @@ import { Eye } from 'lucide-react';
 import { SiGithub } from '@icons-pack/react-simple-icons';
 import { motion } from 'framer-motion';
 
-import { TechIcons } from '../lib/TechIcons';
-import type { TechIconId } from '../types/TechIconId';
+import { TechIcons } from '../../lib/TechIcons';
+import type { TechIconId } from '../../types/TechIconId';
 
 type ProjectCardProps = {
 	title: string;
@@ -30,8 +30,7 @@ export default function ProjectCard({
 	description,
 	demo,
 	github,
-	color,
-	onClick,
+	color
 }: ProjectCardProps) {
 	const [tooltip, setTooltip] = useState({
 		text: '',
@@ -58,7 +57,7 @@ export default function ProjectCard({
 	return (
 		<>
 			<motion.div
-				className="w-full md:w-[360px] min-h-[400px] cursor-pointer rounded-xl"
+				className="w-full md:w-[360px] min-h-[400px] rounded-xl"
 				whileHover={{ scale: 1.05 }}
 				transition={{ type: 'tween', stiffness: 100 }}
 				style={{ boxShadow: `0 0 30px ${color}20` }}
