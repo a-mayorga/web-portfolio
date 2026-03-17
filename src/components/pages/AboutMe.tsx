@@ -15,7 +15,7 @@ export default function AboutMe() {
 					</h2>
 
 					<p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed mb-12">
-						I’m a frontend engineer with 6+ years of experience
+						I’m a Senior Software Engineer (Frontend) with 6+ years of experience
 						building modern web applications and product interfaces.
 						I specialize in creating fast, scalable, and
 						user-friendly experiences using technologies like React,

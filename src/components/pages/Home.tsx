@@ -24,7 +24,7 @@ export default function Home() {
 							Hello! I'm Alberto
 						</p>
 						<p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
-							Frontend Engineer
+							Senior Software Engineer (Frontend)
 						</p>
 						<p className="text-base sm:text-lg md:text-xl max-w-xl">
 							Building fast, scalable, and intuitive web
